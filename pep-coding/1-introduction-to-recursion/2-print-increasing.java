@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void printIncreasing(int n){
-        if (n == 0) return;
+        if (n == 0) return; // base case
         printIncreasing(n - 1);
         System.out.println(n);
     }
