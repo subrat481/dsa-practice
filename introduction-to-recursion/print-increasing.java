@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static void printIncreasing(int n){
-        if (n < 1) return;
+        if (n == 0) return;
         printIncreasing(n - 1);
         System.out.println(n);
     }
