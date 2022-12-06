@@ -14,7 +14,7 @@ public class Main {
     }
 
     public static int power(int x, int n){
-        if (n == 0) return 1;
+        if (n == 0) return 1; // base case
         int xpnm1 = power(x, n - 1); // faith
         int xpn = x * xpnm1; // expectation
         return xpn;
