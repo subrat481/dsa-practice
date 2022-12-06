@@ -15,10 +15,10 @@ public class Main {
 
     public static int factorial(int n){
         
-        if (n == 1) return 1;
+        if (n == 1) return 1; // base case
         
         int fnm1 = factorial(n - 1); // faith
-        int nf = n * fnm1;
+        int nf = n * fnm1; // expectation
         return nf;
     }
 
