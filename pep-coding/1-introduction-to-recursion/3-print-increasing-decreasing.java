@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void pdi(int n){
-        if (n == 0) return;
+        if (n == 0) return; // base case
         System.out.println(n); // While going down
         pdi(n - 1);
         System.out.println(n); // While coming up
