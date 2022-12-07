@@ -15,7 +15,8 @@ public class Main {
 
     public static int factorial(int n){
         
-        if (n == 1) return 1; // base case
+        // if (n == 1) return 1; // base case but can't handle when n=0 given
+        if (n == 0) return 1; // base case
         
         int fnm1 = factorial(n - 1); // faith
         int nf = n * fnm1; // expectation
