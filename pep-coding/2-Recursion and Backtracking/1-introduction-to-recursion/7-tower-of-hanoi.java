@@ -24,7 +24,7 @@ public class Main {
         // And instructions will also follow the toh rules.
         toh(n - 1, t1id, t3id, t2id); // faith n-1 disks from t1->t3
         
-        System.out.println(n + "[" + t1id + " -> " + t2id + "]"); // nth disk from t1->t2
+        System.out.println(n + "[" + t1id + " -> " + t2id + "]"); // print nth disk from t1->t2
         
         // It will print the instructions to move n-1 disks from t1 to t3 using t2
         // And instructions will also follow the toh rules.
