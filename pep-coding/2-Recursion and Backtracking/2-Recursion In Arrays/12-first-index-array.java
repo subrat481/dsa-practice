@@ -21,6 +21,7 @@ public class Main {
 
     public static int firstIndex(int[] arr, int idx, int x){
         
+        // base case
         if (idx == arr.length) {
             return -1;
         }
