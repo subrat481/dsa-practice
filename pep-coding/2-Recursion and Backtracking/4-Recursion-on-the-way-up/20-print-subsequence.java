@@ -27,8 +27,9 @@ public class Main {
         char ch = ques.charAt(0);
         String roq = ques.substring(1);
         
-        printSS(roq, ans + ch);
-        printSS(roq, ans + "");
+        // There are only 2 options - first char will come or not come
+        printSS(roq, ans + ch); // first char want to come
+        printSS(roq, ans + ""); // first char don't want to come
         
     }
 
