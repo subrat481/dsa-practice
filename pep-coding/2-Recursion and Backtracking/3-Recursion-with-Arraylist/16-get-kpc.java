@@ -33,7 +33,7 @@ public class Main {
         
         // Meeting the expectation
         ArrayList<String> myres = new ArrayList<>(); // expectation -> [prepare 24 words of 678]
-        String codeForCh = codes[ch - 48]; // converting character to integer
+        String codeForCh = codes[ch - '0']; // converting character to integer
         for (int i = 0; i < codeForCh.length(); i++) {
             char chcode = codeForCh.charAt(i);
             for (String rstr: rres) {
