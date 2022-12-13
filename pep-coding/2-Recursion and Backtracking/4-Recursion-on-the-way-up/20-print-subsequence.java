@@ -14,6 +14,7 @@ public class Main {
 
     }
     
+    // Labels and Options Style Approach
     // Memory Optimized - (n+1)*n
     // Previously we have taken (2^n)*n
     public static void printSS(String ques, String ans) {
