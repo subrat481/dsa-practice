@@ -25,23 +25,23 @@ public class Main {
     // dc - destination column
     public static void printMazePaths(int sr, int sc, int dr, int dc, String psf) {
 
-	// Handle Smartly
-	// Don't go out of the board
-	if (sr > dr || sc > dc) {
-	    return; // don't do anything, simply return
-	}
-
-	// Smart Base case
-	// When we reached rhe destination
-	if (sr == dr && sc == dc) {
-	    System.out.println(psf);
-	    return;
-	}
-
-	// There are only 2 options - horizontal and vertical
-	// Call Randomly/Stupidly and Base case smartly
-	printMazePaths(sr, sc + 1, dr, dc, psf + "h"); // Horizontal call
-	printMazePaths(sr + 1, sc, dr, dc, psf + "v"); // Vertical call
+    	// Handle Smartly
+    	// Don't go out of the board
+    	if (sr > dr || sc > dc) {
+    	    return; // don't do anything, simply return
+    	}
+    
+    	// Smart Base case
+    	// When we reached rhe destination
+    	if (sr == dr && sc == dc) {
+    	    System.out.println(psf);
+    	    return;
+    	}
+    
+    	// There are only 2 options - horizontal and vertical
+    	// Call Randomly/Stupidly and Base case smartly
+    	printMazePaths(sr, sc + 1, dr, dc, psf + "h"); // Horizontal call
+    	printMazePaths(sr + 1, sc, dr, dc, psf + "v"); // Vertical call
 
     }
 
