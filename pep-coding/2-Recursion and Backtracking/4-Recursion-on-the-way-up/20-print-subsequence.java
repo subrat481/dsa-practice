@@ -15,8 +15,9 @@ public class Main {
     }
     
     // Labels and Options Style Approach
+    // This is called as Recursion on the way up
     // Memory Optimized - (n+1)*n
-    // Previously we have taken (2^n)*n
+    // Previously we have taken (2^n)*n in FE (faith-expectation) kind of recursion.
     public static void printSS(String ques, String ans) {
         
         if (ques.length() == 0) {
