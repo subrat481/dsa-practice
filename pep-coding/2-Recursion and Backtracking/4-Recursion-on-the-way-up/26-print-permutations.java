@@ -26,7 +26,7 @@ public class Main {
             return;
         }
         
-        // There are ques length options
+        // There are ques length options (each spot is the option)
         // Each option is of each character and will be appended in the answer
         // Below loop will terminate once question is completed
         for (int spot = 0; spot < ques.length(); spot++) {
