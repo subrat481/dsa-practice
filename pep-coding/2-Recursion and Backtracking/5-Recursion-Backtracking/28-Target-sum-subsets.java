@@ -38,6 +38,11 @@ public class Main {
             return;
         }
         
+        // Stop wasting time
+        if (sos > tar) {
+            return;
+        }
+        
         // There are 2 options
         // element (arr[idx]) want to become the part of sos
         // element (arr[idx]) don't want to become the part of sos
