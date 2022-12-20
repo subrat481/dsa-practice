@@ -21,7 +21,7 @@ public class Main {
     // This is called as Recursion on the way up
     // Memory Optimized
     
-    // Generally function you'll find the labels
+    // Generally function param - you'll find the labels
     // Options are the calls that you made inside the function
     public static void printNQueens(int[][] chess, String qsf, int row) {
         
