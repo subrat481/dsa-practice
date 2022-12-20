@@ -26,7 +26,7 @@ public class Main {
         }
         
         // base case (positive base case)
-        if (upcomingMove == chess.length * chess.length) {
+        if (upcomingMove == chess.length * chess.length) { // last move
             chess[r][c] = upcomingMove; // we have still not moved so we have to first move
             displayBoard(chess); // then print the path so far
             chess[r][c] = 0; // unreserve the place and explore more paths
