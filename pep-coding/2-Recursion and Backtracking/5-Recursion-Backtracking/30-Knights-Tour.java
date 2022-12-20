@@ -21,7 +21,7 @@ public class Main {
     public static void printKnightsTour(int[][] chess, int r, int c, int upcomingMove) {
         
         // base case (negative base case)
-        if (r < 0 || c < 0 || r >= chess.length || c >= chess.length || chess[r][c] > 0) {
+        if (r < 0 || c < 0 || r >= chess.length || c >= chess.length || chess[r][c] > 0) { // chess[r][c] != 0 <<-- last condition could also be written like this.
             return;
         }
         
