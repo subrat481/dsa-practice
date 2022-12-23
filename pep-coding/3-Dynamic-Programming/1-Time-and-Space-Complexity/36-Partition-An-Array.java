@@ -20,6 +20,7 @@ public class Main {
     int i = 0;
     int j = 0;
     
+    // Processing will be continued as long as there are any unknown elements
     while (i < arr.length) {
         if (arr[i] > pivot) { // if ith element is greater than pivot element
         
