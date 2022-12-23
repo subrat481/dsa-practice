@@ -6,6 +6,7 @@ import java.util.*;
 **/
 public class Main {
 
+  // partitioning in 0's and 1's elements in given array
   public static void sort01(int[] arr) {
     
     // i to end --> unknown elements
