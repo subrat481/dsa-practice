@@ -6,8 +6,10 @@ import java.util.*;
 **/
 public class Main {
 
+  // Placing minimum to the correct position
   public static void selectionSort(int[] arr) {
     
+    // Placing minimum to the correct position in each outer iteration
     for (int i = 0; i < arr.length - 1; i++) { // n-1 iterations to sort n items
         int minIndex = i;
         for (int j = i + 1; j < arr.length; j++) {
