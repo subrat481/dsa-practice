@@ -6,8 +6,10 @@ import java.util.*;
 **/
 public class Main {
 
+  // Placing maximum to the correct position
   public static void bubbleSort(int[] arr) {//7,-2,4,1,3
     
+    // Placing maximum to the correct position in each outer iteration
     for (int itr = 1; itr <= arr.length; itr++) { // n-1 iterations to sort n items
         for (int j = 0; j < arr.length - itr; j++) {
             if (isSmaller(arr, j + 1, j)) { // comparing whether arr[j+1] element isSmaller than arr[j] element
