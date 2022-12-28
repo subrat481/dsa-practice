@@ -10,6 +10,7 @@ public class Main {
     
     // Strictly greater than hi -> one more label of calls hence little more time consuming.
     // But we made this condition just for submission purpose.
+    // base case
     if (lo > hi) { // it can work only upto here -> (lo >= hi), hence no need blank calls on next label and this is efficient.
         return;
     }
