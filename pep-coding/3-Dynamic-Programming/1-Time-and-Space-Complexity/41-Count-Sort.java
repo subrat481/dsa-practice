@@ -11,10 +11,10 @@ public class Main {
   public static void countSort(int[] arr, int min, int max) {
       
       int range = max - min + 1;
-      int frequencyArr[] = new int[range];
       
       // Prepare frequency array by filling frequencies of each elements in original array.
       // Iterate over the original array once and fill frequency array
+      int frequencyArr[] = new int[range];
       for (int i = 0; i < arr.length; i++) {
           int index = arr[i] - min;
           frequencyArr[index] = frequencyArr[index] + 1; // or frequencyArr[index]++;
