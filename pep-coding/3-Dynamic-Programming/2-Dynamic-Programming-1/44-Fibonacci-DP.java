@@ -51,7 +51,7 @@ public static void main(String[] args) throws Exception {
          if (i == 0 || i == 1) { // we know already
              dp[i] = i;
          } else {
-             dp[i] = dp[i - 1] + dp[i - 2]; // last 2 index sum
+             dp[i] = dp[i - 1] + dp[i - 2]; // last 2 index elements sum
          }
      }
      
