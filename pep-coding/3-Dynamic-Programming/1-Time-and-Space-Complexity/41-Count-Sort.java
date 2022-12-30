@@ -21,7 +21,7 @@ public class Main {
           // frequencyArr[index]++;
       }
       
-      // Converting frequency array into Prefix Sum array
+      // Converting frequency array into Prefix Sum array to maintain stability or relative ordering of elements (stable sorting)
       // To hold the position of each element in original array
       // Iterate over the frequencyArr once and convert into prefix sum array
       for (int i = 1; i < frequencyArr.length; i++) {
