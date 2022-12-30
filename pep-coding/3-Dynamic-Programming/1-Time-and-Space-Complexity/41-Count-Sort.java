@@ -38,7 +38,7 @@ public class Main {
           int index = position - 1; // converting position to answer array index
           ans[index] = value; // store the value in answer array to its position
           
-          frequencyArr[value - min]--; // dereasing the position
+          frequencyArr[value - min]--; // decreasing the position
           // frequencyArr[position]--; // that's wrong! think about it.
       }
       
