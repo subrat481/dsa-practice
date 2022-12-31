@@ -41,11 +41,13 @@ public static void main(String[] args) throws Exception {
  }
  
  // Tabulation approach - ultimately we are filling only question bank table
+ // Tabulation approach - ultimately we are filling only question bank table
  // Hence we try to fill question bank only and avoid recursive call
  // 1. Storage & Meaning of each cell in table
- // 2. Direction of Problem (small to large or large to small)
+ // 2. Direction of Problem (small to large or large to small <- check the base case of recursion)
  // 3. Traverse and solve the problem in the identified direction.
  // Only Iteration needed
+ // Recursion base case always be the smallest problem hence fill it first in table.
  public static int fibTabulation(int n) {
      
      int[] dp = new int[n + 1]; // creating table
