@@ -51,7 +51,7 @@ public class Main {
         }
         
         // another base case
-        if (qb[n] > 0) { // (qb[n] != 0) <- this condition is wrong
+        if (qb[n] > 0) { // (qb[n] != 0) <- we can use this condition also
             return qb[n];
         }
         
