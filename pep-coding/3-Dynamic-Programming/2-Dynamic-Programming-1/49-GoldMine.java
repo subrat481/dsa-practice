@@ -19,7 +19,7 @@ public class Main {
             }
         }
         
-        // System.out.println(goldMine(mine, 0, 0)); // We can't fix this line
+        // System.out.println(goldMine(mine, 0, 0)); // We can't fix this line as starting call is varying.
         // We need to collect max gold collected by each element in first column
         // And find out which element collected maximum gold and print
         int max = 0;
