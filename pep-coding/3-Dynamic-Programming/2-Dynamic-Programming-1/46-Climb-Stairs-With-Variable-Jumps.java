@@ -46,6 +46,7 @@ public class Main {
     }
     
     // DP -> with Memoization
+    // Top-Down Approach
     public static int countPathsWIthVarJumpMem(int[] arr, int idx, int[] qb) {
         
         // base case
