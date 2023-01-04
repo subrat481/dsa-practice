@@ -41,6 +41,7 @@ public class Main {
     
     // With DP -> Memoization Approach
     // qb - question bank
+    // Bottom-Up Approach
     public static int countPathsMem(int n, int[] qb) {
         
         // base case
