@@ -20,8 +20,8 @@ public class Main {
         
         // System.out.println(coinChangeCombination(dinominations, 0, amount));
         // System.out.println(coinChangeCombinationTab(dinominations, amount));
-        // System.out.println(coinChangeCombinationTab2D(dinominations, amount)); <-- please try it
-        System.out.println(coinChangeCombinationMem(dinominations, 0, amount, new int[n + 1][amount + 1]));
+        System.out.println(coinChangeCombinationTab2D(dinominations, amount));
+        // System.out.println(coinChangeCombinationMem(dinominations, 0, amount, new int[n + 1][amount + 1]));
 
     }
     
@@ -72,27 +72,29 @@ public class Main {
         
     }
     
-    // Please try this
-    // public static int coinChangeCombinationTab2D(int[] dinoms, int amount) {
+    public static int coinChangeCombinationTab2D(int[] dinoms, int amount) {
         
-    //     int[][] dp = new int[dinoms.length + 1][amount + 1];
+        int[][] dp = new int[dinoms.length + 1][amount + 1];
         
-    //     for (int i = 0; i < dp.length; i++) {
-    //         for (int j = 0; j < dp[0].length; j++) {
-    //             if (j == 0) {
-    //                 dp[i][j] = 1; // there is always one way to pay zero rupees from any coin.
-    //             } else {
-    //                 dp[i][j] = dp[i - 1][j]; // element don't want to come & max profit
-    //                 if (j - dinoms[i - 1] >= 0) {
-    //                     dp[i][j] = dp[i - 1][j] + dp[i - 1][j - dinoms[i - 1]];    
-    //                 }
-    //             }
-    //         }
-    //     }
+        // First column will be always 1
+        // there is always one way to pay zero rupees from any coin.
+        for (int i = 0; i < dp.length; i++) {
+            dp[i][0] = 1;
+        }
         
-    //     return dp[dp.length - 1][dp[0].length - 1];
+        for (int i = 1; i < dp.length; i++) {
+            for (int j = 1; j < dp[0].length; j++) {
+                dp[i][j] = dp[i - 1][j]; // element don't want to come & max profit
+                if (j - dinoms[i - 1] >= 0) { // j - dinoms[i - 1] >= 0 <- column must be in range
+                    // dp[i][j - dinoms[i - 1]] <- same row and dinoms[i - 1] column back
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - dinoms[i - 1]]; // element want to come
+                }
+            }
+        }
         
-    // }
+        return dp[dp.length - 1][dp[0].length - 1];
+        
+    }
     
     public static int coinChangeCombinationTab(int[] dinoms, int amount) {
         
