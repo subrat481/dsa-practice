@@ -20,7 +20,8 @@ public class Main {
         
         // System.out.println(coinChangePermutation(dinominations, amount)); // TLE
         // System.out.println(coinChangePermutationMem(dinominations, amount, new int[amount + 1]));
-        System.out.println(coinChangePermutationTab(dinominations, amount));
+        System.out.println(coinChangePermutationMem2(dinominations, amount, new Integer[amount + 1]));
+        // System.out.println(coinChangePermutationTab(dinominations, amount));
         
     }
     
@@ -61,6 +62,32 @@ public class Main {
         int ways = 0;
         for (int dinom: dinoms) {
             ways += coinChangePermutationMem(dinoms, amount - dinom, dp);
+        }
+        
+        dp[amount] = ways;
+        
+        return ways;
+    }
+    
+    public static int coinChangePermutationMem2(int[] dinoms, int amount, Integer[] dp) {
+        
+        if (amount == 0) {
+            return 1;
+        }
+        
+        if (amount < 0) {
+            return 0;
+        }
+        
+        // to avoid extra calls if answer is zero, hence changed to null
+        if (dp[amount] != null) {
+            return dp[amount];
+        }
+        
+        // Explore all the choices for permutations instead of element wants to come or not as it denots combinations.
+        int ways = 0;
+        for (int dinom: dinoms) {
+            ways += coinChangePermutationMem2(dinoms, amount - dinom, dp);
         }
         
         dp[amount] = ways;
