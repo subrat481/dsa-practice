@@ -32,7 +32,7 @@ public class Main {
         int[] dp = new int[cap + 1];
         // we know that 0 price, 0 weight -> 0 max profit
         
-        // Combination logic
+        // Coin Change Combination logic - you can apply even permutaiton logic also.
         for (int i = 0; i < prices.length; i++) {
             int itemPrice = prices[i];
             int itemWeight = weights[i];
